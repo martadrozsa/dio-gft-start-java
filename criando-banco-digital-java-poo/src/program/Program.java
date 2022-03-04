@@ -11,7 +11,7 @@ public class Program {
         client1.setPhone("999999999");
 
         Account checkingAccount1 = new CheckingAccount(client1);
-        checkingAccount1.deposit(100);
+        checkingAccount1.deposit(200);
 
         Account savingsAccount1 = new SavingsAccount(client1);
         checkingAccount1.transfer(savingsAccount1, 100);

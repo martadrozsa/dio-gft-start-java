@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public abstract class Account implements IAccount{
 
-    private static final  int DEFAULT_AGENCY = 0;
+    private static final  int DEFAULT_AGENCY = 123;
     private static int SEQUENTIAL = 1;
 
     protected int bankOffice;
