@@ -1,14 +1,15 @@
-package com.denisczwicz.chalenge.domain;
-
+package com.denisczwicz.chalenge.domain.entities;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
-@EqualsAndHashCode(callSuper = true)
-@Data
-public class Course extends Content{
+public class Course extends Content {
 
-    private  int totalHours;
+    private final int totalHours;
+
+    public Course(String title, String description, int totalHours) {
+        super(title, description);
+        this.totalHours = totalHours;
+    }
 
     @Override
     public double calculateXP() {
@@ -17,7 +18,7 @@ public class Course extends Content{
 
     @Override
     public String toString() {
-        return "\n - COURSE - " +
+        return "\n- COURSE - " +
                 "\nTitle: " + getTitle() +
                 "\nDescription: " + getDescription() +
                 "\nTotal hours: " + totalHours

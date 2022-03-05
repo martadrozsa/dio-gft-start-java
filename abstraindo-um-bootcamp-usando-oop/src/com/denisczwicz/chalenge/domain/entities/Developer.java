@@ -1,16 +1,17 @@
-package com.denisczwicz.chalenge.domain;
+package com.denisczwicz.chalenge.domain.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import java.util.LinkedHashSet;
 import java.util.Optional;
 import java.util.Set;
 
 @Data
+@RequiredArgsConstructor
 public class Developer {
 
-    private String name;
+    private final String name;
 
     private Set<Content> enrolledContents = new LinkedHashSet<>();
     private Set<Content> completedContents = new LinkedHashSet<>();
@@ -34,4 +35,21 @@ public class Developer {
         return this.completedContents.stream().mapToDouble(Content::calculateXP).sum();
     }
 
+   public String getEnrolledContentsFormat() {
+        String result = "";
+
+        for (Content content : enrolledContents) {
+            result += content.toString();
+        }
+        return result;
+   }
+
+    public String getCompletedContentsFormat() {
+        String result = "";
+
+        for (Content content : completedContents) {
+            result += content.toString();
+        }
+        return result;
+    }
 }
