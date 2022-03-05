@@ -3,11 +3,9 @@ package com.denisczwicz.chalenge.domain;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-@NoArgsConstructor
 public class Course extends Content{
 
     private  int totalHours;
@@ -19,10 +17,10 @@ public class Course extends Content{
 
     @Override
     public String toString() {
-        return "Course: " +
-                "tile: " + getTitle() +
-                "description: " + getDescription() +
-                "total hours: " + totalHours +
+        return "Course " +
+                "\nTile: " + getTitle() +
+                "\nDescription: " + getDescription() +
+                "\nTotal hours: " + totalHours +
                 '}';
     }
 }

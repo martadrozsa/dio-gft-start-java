@@ -26,9 +26,9 @@ public class Program {
         mentorship2.setDescription("Flutter Course Mentorship");
         mentorship2.setDate(LocalDate.now());
 
-        System.out.println(course1);
-        System.out.println(course2);
-        System.out.println(mentorship1);
+        System.out.println(course1 + "\n");
+        System.out.println(course2 + "\n");
+        System.out.println(mentorship1 + "\n");
         System.out.println(mentorship2);
 
     }
