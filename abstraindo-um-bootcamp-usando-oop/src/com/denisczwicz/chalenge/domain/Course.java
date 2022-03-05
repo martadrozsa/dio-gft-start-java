@@ -17,10 +17,10 @@ public class Course extends Content{
 
     @Override
     public String toString() {
-        return "Course " +
-                "\nTile: " + getTitle() +
+        return "\n - COURSE - " +
+                "\nTitle: " + getTitle() +
                 "\nDescription: " + getDescription() +
-                "\nTotal hours: " + totalHours +
-                '}';
+                "\nTotal hours: " + totalHours
+                ;
     }
 }

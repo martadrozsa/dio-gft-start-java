@@ -21,10 +21,10 @@ public class Mentorship extends Content{
 
     @Override
     public String toString() {
-        return "Mentorship " +
-                "\nTile: " + getTitle() +
+        return "\n - Mentorship - " +
+                "\nTitle: " + getTitle() +
                 "\nDescription: " + getDescription() +
-                "\nDate: " + date +
-                '}';
+                "\nDate: " + date
+                ;
     }
 }

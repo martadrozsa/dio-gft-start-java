@@ -17,4 +17,6 @@ public class Bootcamp {
 
     private Set<Developer> enrolledDevelopers = new HashSet<>();
     private Set<Content> contents = new LinkedHashSet<>();
+
 }
+

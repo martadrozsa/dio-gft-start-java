@@ -8,7 +8,6 @@ import java.util.Optional;
 import java.util.Set;
 
 @Data
-@AllArgsConstructor
 public class Developer {
 
     private String name;
@@ -34,4 +33,5 @@ public class Developer {
     public double calculateTotalXP() {
         return this.completedContents.stream().mapToDouble(Content::calculateXP).sum();
     }
+
 }
