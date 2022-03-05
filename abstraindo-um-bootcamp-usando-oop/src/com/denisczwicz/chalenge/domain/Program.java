@@ -16,9 +16,6 @@ public class Program {
         course2.setDescription("Flutter introduction");
         course2.setTotalHours(10);
 
-        System.out.println(course1);
-        System.out.println(course2);
-
         Mentorship mentorship1 = new Mentorship();
         mentorship1.setTitle("Java Course");
         mentorship1.setDescription("Java Course Mentorship");
@@ -28,6 +25,11 @@ public class Program {
         mentorship2.setTitle("Flutter Course");
         mentorship2.setDescription("Flutter Course Mentorship");
         mentorship2.setDate(LocalDate.now());
+
+        System.out.println(course1);
+        System.out.println(course2);
+        System.out.println(mentorship1);
+        System.out.println(mentorship2);
 
     }
 }
