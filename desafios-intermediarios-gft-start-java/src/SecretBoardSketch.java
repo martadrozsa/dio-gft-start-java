@@ -3,14 +3,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class SecretBoard {
+public class SecretBoardSketch {
 
     public static void main(String[] args) throws IOException {
+//        int[][] board = {
+//                {0, 5, 3, 8, 5},
+//                {3, 5, 8, 8, 2},
+//                {0, 7, 8, 4, 7},
+//                {7, 2, 5, 8, 2},
+//                {3, 2, 3, 2, 5},
+//        };
 
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the board size: ");
+        //int n = sc.nextInt();
+
+
+        System.out.print("Enter the number of operations: ");
+        //int quantityOperations = sc.nextInt();
+
+//        for (int i = 0; i < board.length; i++) {
+//            for (int j = 0; j < board.length; j++) {
+//                board[i][j] = sc.nextInt();
+//            }
+//        }
 
         String valuesSizeQuantity = sc.nextLine();
-        String[] result = valuesSizeQuantity.split(" ");
+        String[] result = valuesSizeQuantity.split(valuesSizeQuantity);
 
         int n = Integer.parseInt(result[0]);
         int q = Integer.parseInt(result[1]);
@@ -20,22 +39,21 @@ public class SecretBoard {
         int i = 0;
         while (i < q) {
             String operations = sc.nextLine();
-            String[] valuesOperations = operations.split(" ");
+            String[] valuesOperations = operations.split(operations);
 
             int ope;
             int pos;
             int value = 0;
 
             if (valuesOperations.length == 3) {
-                ope = Integer.parseInt(valuesOperations[0]);
-                pos = Integer.parseInt(valuesOperations[1]);
-                value = Integer.parseInt(valuesOperations[2]);
+                ope = Integer.parseInt(result[0]);
+                pos = Integer.parseInt(result[1]);
+                value = Integer.parseInt(result[2]);
             }
             else {
-                ope = Integer.parseInt(valuesOperations[0]);
-                pos = Integer.parseInt(valuesOperations[1]);
+                ope = Integer.parseInt(result[0]);
+                pos = Integer.parseInt(result[1]);
             }
-            pos--;
 
             switch (ope) {
                 case 1:
@@ -54,6 +72,29 @@ public class SecretBoard {
             i++;
 
         }
+
+
+//
+//        System.out.println("Enter value X:");
+//        int x = sc.nextInt();
+//
+//        System.out.println("Enter value R:");
+//        int r = sc.nextInt();
+
+//        assignValueRLineX(board, 3, 9);
+//        assignValueRColumnX(board, 3, 1);
+
+//        for (int i = 0; i < board.length; i++) {
+//            for (int j = 0; j < board.length; j++) {
+//                System.out.print(board[i][j]);
+//            }
+//            System.out.println();
+//        }
+
+//        System.out.println(printFrequentValueColumnX(board, 1));
+//        System.out.println(printFrequentValueLineX(board,4));
+
+
         sc.close();
 
     }
@@ -61,16 +102,18 @@ public class SecretBoard {
     public static void assignValueRLineX(int[][] board, int x, int r) {
         for (int i = 0; i < board.length; i++) {
             board[x][i] = r;
+            //System.out.print(boardSize[x][i]);
         }
     }
 
     public static void assignValueRColumnX(int[][] board, int x, int r) {
         for (int j = 0; j < board.length; j++) {
             board[j][x] = r;
+            //System.out.print(boardSize[j][x]);
         }
     }
 
-    public static void printFrequentValueLineX(int[][] board, int x) {
+    public static int printFrequentValueLineX(int[][] board, int x) {
 
         Map<Integer, Integer> frequencyLine = new HashMap<>();
 
@@ -100,10 +143,10 @@ public class SecretBoard {
                 biggestKey = key;
             }
         }
-        System.out.println(biggestKey);
+        return biggestKey;
     }
 
-    public static void printFrequentValueColumnX(int[][] board, int x) {
+    public static int printFrequentValueColumnX(int[][] board, int x) {
         Map<Integer, Integer> frequencyColumn = new HashMap<>();
 
         for (int[] ints : board) {
@@ -132,6 +175,7 @@ public class SecretBoard {
                 biggestKey = key;
             }
         }
-        System.out.println(biggestKey);
+        return biggestKey;
     }
+
 }
